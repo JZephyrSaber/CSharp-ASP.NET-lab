@@ -46,6 +46,7 @@ public partial class _5_30_Linked_to_sql : System.Web.UI.Page
 
     protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
     {
+        // 一定要将DropDownList的AutoPostBack属性打开
         String snoIndex = DropDownList1.SelectedItem.Text;
         // String snoIndex = DropDownList1.SelectedValue;
         SqlDataAdapter sqlDa = new SqlDataAdapter("select * from stu_info where sno='" + snoIndex + "'", SqlCon);
