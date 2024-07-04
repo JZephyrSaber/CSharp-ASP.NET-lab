@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    
+    <style>
+        .table{
+            /*此元素会作为块级表格来显示（类似 <table>），表格前后带有换行符。*/
+            /*Can show a block table, just like the <table>*/
+            display:table;
+            /*border-collapse:collapse;*/
+            border-collapse:separate;
+            border:1px solid #ccc;
+        }
+        .table-caption{
+            /*此元素会作为一个表格标题显示（类似 <caption>）*/
+            /*Show a caption for this table, just like <caption>*/
+            display:table-caption;
+            margin:0;
+            font-size:16px;
+            text-align: center;
+        }
+        .table-header-group{
+            /*此元素会作为一个或多个行的分组来显示（类似 <thead>）。*/
+            /*Show one or many rows in the group,like <thead>*/
+            display:table-header-group;
+            background:#eee;
+            font-weight:bold;
+        }
+        .table-row-group{
+            /*此元素会作为一个或多个行的分组来显示（类似 <tbody>）。*/
+            /*Show one or many rows in the group, like <tbody>*/
+            display:table-row-group;
+        }
+        .table-footer-group{
+            /*此元素会作为一个或多个行的分组来显示（类似 <tfoot>）。*/
+            /*like <tfoot>,to show many rows in the group*/
+            display:table-footer-group;
+        }
+        ul{
+            list-style:none;
+        }
+        .table-row{
+            /*此元素会作为一个表格行显示（类似 <tr>）。*/
+            /*As a table row to show*/
+            display:table-row;
+        }
+        .table-cell{
+            /*此元素会作为一个表格单元格显示（类似 <td> 和 <th>）*/
+            /*Like <td> and <th>*/
+            display:table-cell;
+            padding:0 5px;
+            border:1px solid #ccc;
+        }
+        .table-row-group .table-row:hover,
+        .table-footer-group .table-row:hover{
+            background:#f6f6f6;
+            color:green;
+            font-weight: bold;
+        }
+        .table-column-group{
+            /*此元素会作为一个或多个列的分组来显示（类似 <colgroup>）。*/
+            /*Like <colgroup>*/
+            display:table-column-group;
+        }
+        .table-column{
+            /*此元素会作为一个单元格列显示（类似 <col>）*/
+            display:table-column;
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="table">
+            <h2 class="table-caption">表名</h2>
+            <!--此行代码用于，控制列的样式。-->
+            <!--Control every column -->
+            <div class="table-column-group">
+                <div class="table-column"></div>
+                <div class="table-column"></div>
+                <div class="table-column"></div>
+            </div>
+            <div class="table-header-group">
+                <ul class="table-row">
+                    <li class="table-cell">序号</li>
+                    <li class="table-cell">姓名</li>
+                    <li class="table-cell">年龄</li>
+                </ul>
+            </div>
+            <div class="table-row-group">
+                <ul class="table-row">
+                    <li class="table-cell">1</li>
+                    <li class="table-cell">AA</li>
+                    <li class="table-cell">123</li>
+                </ul>
+                <ul class="table-row">
+                    <li class="table-cell">2</li>
+                    <li class="table-cell">BB</li>
+                    <li class="table-cell">222</li>
+                </ul>
+                <ul class="table-row">
+                    <li class="table-cell">3</li>
+                    <li class="table-cell">CC</li>
+                    <li class="table-cell">333</li>
+                </ul>
+            </div>
+            <div class="table-footer-group">
+                <ul class="table-row">
+                    <li class="table-cell">表格底部1</li>
+                    <li class="table-cell">表格底部2</li>
+                    <li class="table-cell">表格底部3</li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
